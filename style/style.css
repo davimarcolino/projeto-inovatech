@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+@import url(../fonts/ethernal.ttf);
+
+:root {
+    --fonte-inovatech: 'ethernal';
+    --fundo-principal: #cacaca;
+    --texto: #222222;
+    --texto-inverso: #ffffff;
+    --destaque: #00052f;
+    --destaque-inverso: #8fffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: var(--fundo-principal);
+}
+
+#cabecalho {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    flex-flow: row wrap;
+    background-color: var(--destaque);
+}
+
+#cabecalho h1 {
+    display: block;
+    flex: auto;
+    font-family: 'ethernal';
+    text-align: center;
+    color: var(--destaque-inverso);
+}
+
+#cabecalho ul {
+    display: flex;
+    flex: auto;
+    flex-flow: row nowrap;
+    list-style-type: none;
+}
+
+#cabecalho li {
+    padding: 5px;
+    margin: 0px 7px;
+}
+
+#cabecalho i {
+    color: var(--destaque-inverso);
+}
+
+#principal {
+    display: grid;
+    grid-template-columns: auto 90vw auto;
+}
