@@ -9,6 +9,8 @@
     --texto-inverso: #ffffff;
     --destaque: #00052f;
     --destaque-inverso: #8fffff;
+    --logo: images/logo-inovatech-clara;
+    --logo-inversa: images/logo-inovatech-escura;
 }
 
 * {
@@ -25,13 +27,14 @@ body {
 #cabecalho {
     display: flex;
     width: 100%;
-    padding: 10px;
+    padding: 5px;
     flex-flow: row wrap;
+    align-items: center;
+    align-content: space-between;
     background-color: var(--destaque);
 }
 
 #cabecalho h1 {
-    display: block;
     flex: auto;
     font-family: 'ethernal';
     text-align: center;
@@ -46,15 +49,67 @@ body {
 }
 
 #cabecalho li {
-    padding: 5px;
     margin: 0px 7px;
+    padding: 5px;
+    border-radius: 10px;
+    transition: .5s;
 }
 
 #cabecalho i {
     color: var(--destaque-inverso);
+    transition: .5s;
+}
+
+#cabecalho li:hover {
+    background-color: var(--destaque-inverso);
+}
+
+#cabecalho li:hover i {
+    color: var(--destaque);
 }
 
 #principal {
     display: grid;
     grid-template-columns: auto 90vw auto;
+    padding: 10px;
+}
+
+#quem-somos {
+    grid-column: 2 / -2;
+    display: flex;
+}
+
+#quem-somos .img {
+    flex: 0 0 50%;
+    overflow: hidden;
+    border: solid 5px var(--texto-inverso);
+    outline: solid 5px var(--destaque-inverso);
+    border-radius: 50%;
+}
+
+#quem-somos .texto {
+    flex: 0 0 50%;
+    text-align: center;
+}
+
+#quem-somos h1 {
+    color: var(--destaque);
+    font-size: 1.6em;
+}
+
+.texto strong {
+    color: var(--destaque);
+}
+
+.img img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+article {
+    background-color: var(--texto-inverso);
+    padding: 10px;
+    border-radius: 10px;
 }
